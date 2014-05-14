@@ -24,13 +24,8 @@ RUN chmod 755 /*.sh
 ADD apache_default /etc/apache2/sites-available/default
 RUN a2enmod rewrite
 
-# Configure /app folder with sample app
-RUN git clone https://github.com/fermayo/hello-world-lamp.git /app
-RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
-
 # SSHD
 RUN mkdir /var/run/sshd
 RUN echo 'root:vagrant' |chpasswd
 
 EXPOSE 22 80 3306
-CMD ["/run.sh"]
