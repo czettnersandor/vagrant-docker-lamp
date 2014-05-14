@@ -1,7 +1,7 @@
 FROM ubuntu:12.04
 
 # Install packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh supervisor git apache2 libapache2-mod-php5 mysql-server php5-mysql pwgen
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh supervisor git apache2 libapache2-mod-php5 mysql-server php5-mysql php5-curl php5-gd pwgen drush
 
 # Add image configuration and scripts
 ADD start-apache2.sh /start-apache2.sh
