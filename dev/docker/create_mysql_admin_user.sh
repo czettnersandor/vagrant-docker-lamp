@@ -20,9 +20,9 @@ done
 echo "=> Creating MySQL admin user with ${_word} password"
 mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY '$PASS'"
 mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION"
-mysql -uroot -e "create database `database`;"
+mysql -uroot -e "create database \`database\`;"
 mysql -uroot -e "grant usage on *.* to myadmin@localhost identified by 'myadmin';"
-mysql -uroot -e "grant all privileges on `database`.* to myadmin@localhost;"
+mysql -uroot -e "grant all privileges on \`database\`.* to myadmin@localhost;"
 mysql -uroot -e "flush privileges;"
 
 mysqladmin -uroot shutdown
