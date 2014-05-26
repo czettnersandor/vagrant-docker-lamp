@@ -5,6 +5,19 @@ Vagrant/Docker files for a LAMP Virtual Machine like setup. In approach to give 
 
 This configuration is designed for Magento development, but can be also used for any PHP application. Tested with Drupal as well.
 
+Provides
+--------
+
+  * Ubuntu 12.04 LTS
+  * Apache 2.2.22
+  * MySQL 5.5.37
+  * PHP 5.3.10
+  * SSH
+  * supervisord for keeping ssh, apache, mysql running (no init scripts).
+  * shutdown script
+  * Pre configured Apache virtualhost and a database ready to use
+  * Just drop this config into your project and start using
+
 Preparation
 -----------
 
