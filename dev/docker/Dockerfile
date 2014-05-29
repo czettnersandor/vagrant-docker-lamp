@@ -23,7 +23,7 @@ RUN chmod 755 /*.sh /sbin/shutdown
 
 # config to enable .htaccess
 ADD apache_default /etc/apache2/sites-available/default
-RUN a2enmod rewrite
+RUN a2enmod rewrite headers
 
 # SSHD
 RUN mkdir /var/run/sshd
