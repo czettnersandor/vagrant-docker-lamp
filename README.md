@@ -46,9 +46,55 @@ You can SSH to the box:
 
 A mysql database has been set up and ready to use immediately. Username: `myadmin`. Password: `myadmin`. Database name: `database`
 
+XDebug with Sublime Text
+------------------------
+
+Install this plugin via Package Control: https://github.com/martomo/SublimeTextXdebug
+
+### Keyboard Shortcuts
+
+Shift+f8: Open XDebug quick panel
+
+f8: Open XDebug control quick panel when debugger is connected
+
+Ctrl+f8: Toggle breakpoint
+
+Ctrl+Shift+f5: Run to next breakpoint
+
+Ctrl+Shift+f6: Step over
+
+Ctrl+Shift+f7: Step into
+
+Ctrl+Shift+f8: Step out
+
+### Project configuration
+
+*.sublime-project:
+
+    {
+        "folders":
+        [
+            {
+                "path": "..."
+            }
+        ],
+        "settings":
+        {
+            "xdebug": {
+                "path_mapping": {
+                    "/vagrant" : "/absolute/path/to/project/on/computer",
+                },
+                "ide_key": "sublime.xdebug",
+                "url": "http://www.dev-site.com:8080",
+                "port": 9000,
+                "close_on_stop": true,
+                "debug": true
+            }
+        }
+    }
+
 Coming Soon
 -----------
 
-1. xdebug
-2. phpmyadmin
-3. webgrind
+1. phpmyadmin
+2. webgrind
