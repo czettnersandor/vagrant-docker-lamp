@@ -1,12 +1,10 @@
-Vagrant LAMP config with Docker
-==================================
+# Vagrant LAMP config with Docker
 
 Vagrant/Docker files for a LAMP Virtual Machine like setup. In approach to give the speed of the bare metal but the security of a VM using Linux Container (LXC). This configuration gives you a fast, reproducible development environment.
 
 This configuration is designed for Magento development, but can be also used for any PHP application. Tested with Drupal as well.
 
-Provides
---------
+## Provides
 
   * Ubuntu 12.04 LTS
   * Apache 2.2.22
@@ -18,8 +16,7 @@ Provides
   * Pre configured Apache virtualhost and a database ready to use
   * Just drop this config into your project and start using
 
-Preparation
------------
+## Preparation
 
 Install Vagrant (>= 1.6.2): http://www.vagrantup.com/downloads.html
 
@@ -31,8 +28,7 @@ Copy the dev folder and Vagrantfile from this repository to your project folder
         
 It will take a few minutes for the first time.
 
-Start using
------------
+## Start using
 
 Add this line to your `/etc/hosts` (or windows equivalent)
 
@@ -46,8 +42,7 @@ You can SSH to the box:
 
 A mysql database has been set up and ready to use immediately. Username: `myadmin`. Password: `myadmin`. Database name: `database`
 
-XDebug with Sublime Text
-------------------------
+## XDebug with Sublime Text
 
 Install this plugin via Package Control: https://github.com/martomo/SublimeTextXdebug
 
@@ -93,8 +88,7 @@ Ctrl+Shift+f8: Step out
         }
     }
 
-Coming Soon
------------
+## Coming Soon
 
 1. phpmyadmin
 2. webgrind
