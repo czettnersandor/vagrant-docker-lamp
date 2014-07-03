@@ -6,10 +6,10 @@ This configuration is designed for Magento development, but can be also used for
 
 ## Provides
 
-  * Ubuntu 12.04 LTS
-  * Apache 2.2.22
+  * Ubuntu 14.04 LTS
+  * Apache 2.4.7
   * MySQL 5.5.37
-  * PHP 5.3.10
+  * PHP 5.5.9
   * SSH
   * supervisord for keeping ssh, apache, mysql running (no init scripts).
   * shutdown script
