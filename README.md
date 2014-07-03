@@ -20,7 +20,7 @@ This configuration is designed for Magento development, but can be also used for
 
 Install Vagrant (>= 1.6.2): http://www.vagrantup.com/downloads.html
 
-Install Docker (>= 0.11.1) https://www.docker.io/gettingstarted/#h_installation
+Install Docker (>= 1.0.0) https://docs.docker.com/installation/ubuntulinux/
 
 Copy the dev folder and Vagrantfile from this repository to your project folder
 
@@ -89,6 +89,8 @@ Ctrl+Shift+f8: Step out
     }
 
 ## Coming Soon
+
+(pull requests are welcome)
 
 1. phpmyadmin
 2. webgrind
