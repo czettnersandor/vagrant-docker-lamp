@@ -25,7 +25,7 @@ Install Docker (>= 1.0.0) https://docs.docker.com/installation/ubuntulinux/
 Copy the dev folder and Vagrantfile from this repository to your project folder
 
     vagrant up
-        
+
 It will take a few minutes for the first time.
 
 ## Start using
@@ -35,6 +35,10 @@ Add this line to your `/etc/hosts` (or windows equivalent)
     127.0.0.1 www.dev-site.com dev-site.com dev.dev-site-static.com
 
 Your project folder will be served on this url: http://www.dev-site.com:8080
+
+Webgrind is available on this url: http://www.dev-site.com:8080/webgrind
+
+For best use of XDebug and Webgrind features in Chromium, I suggest the [Xdebug helper extension](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc)
 
 You can SSH to the box:
 
@@ -93,4 +97,3 @@ Ctrl+Shift+f8: Step out
 (pull requests are welcome)
 
 1. phpmyadmin
-2. webgrind

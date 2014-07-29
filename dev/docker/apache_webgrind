@@ -1,0 +1,17 @@
+Alias /webgrind /var/www/html/webgrind
+
+<Directory /var/www/html/webgrind>
+	Options FollowSymLinks
+	DirectoryIndex index.php
+
+	<IfModule mod_php5.c>
+		AddType application/x-httpd-php .php
+
+		php_flag magic_quotes_gpc Off
+		php_flag track_vars On
+		php_flag register_globals Off
+		php_admin_flag allow_url_fopen Off
+		php_value include_path .
+	</IfModule>
+
+</Directory>

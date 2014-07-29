@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:*>
         ServerAdmin webmaster@localhost
 
         DocumentRoot /vagrant
