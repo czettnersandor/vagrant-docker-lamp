@@ -21,9 +21,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider "docker" do |d|
     d.build_dir = "./dev/docker"
-    # IMPORTANT
-    # Uncomment the following on first run and comment it again when finished.
-    # This is required otherwise you will not be able to stop the container.
     d.has_ssh = true
     d.cmd = ["/run.sh"]
   end
