@@ -14,6 +14,8 @@ This configuration is designed for Magento development, but can be also used for
   * supervisord for keeping ssh, apache, mysql running (no init scripts).
   * shutdown script
   * Pre configured Apache virtualhost and a database ready to use
+  * XDebug and Webgrind
+  * n98-magerun
   * Just drop this config into your project and start using
 
 ## Preparation

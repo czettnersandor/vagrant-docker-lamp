@@ -20,6 +20,7 @@ ADD supervisord-sshd.conf /etc/supervisor/conf.d/supervisord-sshd.conf
 # Add MySQL users and `database`
 ADD create_mysql_admin_user.sh /create_mysql_admin_user.sh
 ADD install_webgrind.sh /install_webgrind.sh
+ADD install_n98-magerun.sh /install_n98-magerun.sh
 RUN chmod 755 /*.sh /sbin/shutdown
 
 # Apache config

@@ -8,4 +8,8 @@ if [ ! -f /.webgrind-installed ]; then
     /install_webgrind.sh
 fi
 
+if [ ! -f /.n98-magerun-installed ]; then
+    /install_n98-magerun.sh
+fi
+
 exec supervisord -n
