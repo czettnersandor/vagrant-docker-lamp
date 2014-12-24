@@ -12,4 +12,8 @@ if [ ! -f /.n98-magerun-installed ]; then
     /install_n98-magerun.sh
 fi
 
+if [ ! -f /.composer-installed ]; then
+    /install_composer.sh
+fi
+
 exec supervisord -n

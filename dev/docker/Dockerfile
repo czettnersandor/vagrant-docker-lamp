@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 # Install packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh bash sudo supervisor git apache2 memcached libapache2-mod-php5 mysql-server php5-mysql php5-curl php5-gd php5-mcrypt php5-xdebug php5-memcache php5-intl pwgen drush unzip && /usr/sbin/php5enmod mcrypt
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh bash sudo supervisor git apache2 memcached libapache2-mod-php5 mysql-server-5.6 php5-mysql php5-curl php5-gd php5-mcrypt php5-xdebug php5-memcache php5-intl pwgen drush unzip && /usr/sbin/php5enmod mcrypt
 
 # Add image configuration and scripts
 ADD start-apache2.sh /start-apache2.sh
@@ -21,6 +21,7 @@ ADD supervisord-sshd.conf /etc/supervisor/conf.d/supervisord-sshd.conf
 ADD create_mysql_admin_user.sh /create_mysql_admin_user.sh
 ADD install_webgrind.sh /install_webgrind.sh
 ADD install_n98-magerun.sh /install_n98-magerun.sh
+ADD install_composer.sh /install_composer.sh
 RUN chmod 755 /*.sh /sbin/shutdown
 
 # Apache config
