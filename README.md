@@ -94,6 +94,14 @@ Ctrl+Shift+f8: Step out
         }
     }
 
+## Disable XDebug
+
+edit /etc/php5/apache2/conf.d/20-xdebug.ini and comment out the line:
+
+```
+;zend_extension=xdebug.so
+```
+
 ## Coming Soon
 
 (pull requests are welcome)
