@@ -9,6 +9,7 @@ ADD start-mysqld.sh /start-mysqld.sh
 ADD start-sshd.sh /start-sshd.sh
 ADD shutdown /sbin/shutdown
 ADD run.sh /run.sh
+ADD firstrun.sh /firstrun.sh
 RUN chmod 755 /*.sh
 ADD php.ini /etc/php5/apache2/php.ini
 ADD xdebug.ini /etc/php5/apache2/conf.d/xdebug.ini
@@ -33,5 +34,6 @@ RUN a2enmod rewrite headers
 # SSHD
 RUN mkdir /var/run/sshd
 RUN echo 'root:vagrant' |chpasswd
+RUN /firstrun.sh
 
 EXPOSE 22 80 3306 9000
