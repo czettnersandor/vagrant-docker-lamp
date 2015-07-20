@@ -2,7 +2,7 @@
 
 Vagrant/Docker files for a LAMP Virtual Machine like setup. In approach to give the speed of the bare metal but the security of a VM using Linux Container (LXC). This configuration gives you a fast, reproducible development environment.
 
-This configuration is designed for Magento development, but can be also used for any PHP application. Tested with Drupal as well.
+This configuration is designed for Magento and Magento 2 development, but can be also used for any PHP application. Tested with Drupal as well.
 
 ## Provides
 
