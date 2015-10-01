@@ -1,22 +1,22 @@
 # Vagrant LAMP config with Docker
 
-Vagrant/Docker files for a LAMP Virtual Machine like setup. In approach to give the speed of the bare metal but the security of a VM using Linux Container (LXC). This configuration gives you a fast, reproducible development environment.
+Instant development environment. Vagrant/Docker files for a LAMP Virtual Machine like setup. In approach to give the speed of the bare metal but the security of a VM using Linux Container (LXC). This configuration gives you a fast, reproducible development environment.
 
-This configuration is designed for Magento and Magento 2 development, but can be also used for any PHP application. Tested with Drupal as well.
+This configuration is designed for Magento and Magento 2 development, but can be also used for any PHP application. Tested with Drupal 8 as well.
 
 ## Provides
 
-  * Ubuntu 14.04 LTS
-  * Apache 2.4.7
-  * MySQL 5.5.37
-  * PHP 5.5.9
+  * Ubuntu 15.04
+  * Apache 2.4.10
+  * MySQL 5.6.25
+  * PHP 5.6.4
   * SSH
   * supervisord for keeping ssh, apache, mysql running (no init scripts).
   * shutdown script
   * Pre configured Apache virtualhost and a database ready to use
   * XDebug and Webgrind
   * n98-magerun
-  * Just drop this config into your project and start using
+  * Just drop the `dev` folder and `Vagrantfile` into your project and do `vagrant up`
 
 ## Preparation
 
@@ -24,7 +24,7 @@ Install Vagrant (>= 1.6.2): http://www.vagrantup.com/downloads.html
 
 Install Docker (>= 1.0.0) https://docs.docker.com/installation/ubuntulinux/
 
-Copy the dev folder and Vagrantfile from this repository to your project folder
+Copy the `dev` folder and `Vagrantfile` from this repository to your project folder
 
     vagrant up
 
