@@ -36,4 +36,4 @@ RUN mkdir /var/run/sshd
 RUN echo 'root:vagrant' |chpasswd
 RUN /firstrun.sh
 
-EXPOSE 22 80 3306 9000
+EXPOSE 22 80 443 3306 9000
