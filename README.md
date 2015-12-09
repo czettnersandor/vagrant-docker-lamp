@@ -10,6 +10,7 @@ This configuration is designed for Magento and Magento 2 development, but can be
   * Apache 2.4.10
   * MySQL 5.6.25
   * PHP 5.6.4
+  * phpMyAdmin
   * SSH
   * supervisord for keeping ssh, apache, mysql running (no init scripts).
   * shutdown script
@@ -101,9 +102,3 @@ edit /etc/php5/apache2/conf.d/20-xdebug.ini and comment out the line:
 ```
 ;zend_extension=xdebug.so
 ```
-
-## Coming Soon
-
-(pull requests are welcome)
-
-1. phpmyadmin

@@ -1,7 +1,7 @@
 FROM ubuntu:15.04
 
 # Install packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh bash sudo supervisor git apache2 memcached libapache2-mod-php5 mysql-server php5-mysql php5-curl php5-gd php5-mcrypt php5-xdebug php5-memcache php5-intl php5-xsl pwgen drush unzip && /usr/sbin/php5enmod mcrypt
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh bash sudo supervisor git apache2 memcached libapache2-mod-php5 mysql-server php5-mysql php5-curl php5-gd php5-mcrypt php5-xdebug php5-memcache php5-intl php5-xsl phpmyadmin pwgen drush unzip && /usr/sbin/php5enmod mcrypt
 
 # Add image configuration and scripts
 ADD start-apache2.sh /start-apache2.sh
@@ -30,6 +30,10 @@ ADD apache_default /etc/apache2/sites-available/000-default.conf
 ADD apache_webgrind /etc/apache2/sites-enabled/webgrind.conf
 ADD ports.conf /etc/apache2/ports.conf
 RUN a2enmod rewrite headers
+
+# PHPMyAdmin config
+RUN echo "\n# Include PHPMyAdmin configuration\nInclude /etc/phpmyadmin/apache.conf\n" >> /etc/apache2/apache2.conf
+RUN sed -i -e "s/\/\/ \$cfg\['Servers'\]\[\$i\]\['AllowNoPassword'\]/\$cfg\['Servers'\]\[\$i\]\['AllowNoPassword'\]/g" /etc/phpmyadmin/config.inc.php
 
 # SSHD
 RUN mkdir /var/run/sshd
