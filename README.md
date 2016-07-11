@@ -2,14 +2,14 @@
 
 Instant development environment. Vagrant/Docker files for a LAMP Virtual Machine like setup. In approach to give the speed of the bare metal but the security of a VM using Linux Container (LXC). This configuration gives you a fast, reproducible development environment.
 
-This configuration is designed for Magento and Magento 2 development, but can be also used for any PHP application. Tested with Drupal 8 as well.
+This configuration is designed for Magento and Magento 2 development, but can be also used for any PHP application. Tested with Drupal 8 as well. Note for Magento 1, you will need a PHP7 compatibility patch.
 
 ## Provides
 
-  * Ubuntu 15.04
-  * Apache 2.4.10
+  * Ubuntu 16.04
+  * Apache 2.4.18
   * MySQL 5.6.25
-  * PHP 5.6.4
+  * PHP 7.0.4
   * phpMyAdmin
   * SSH
   * supervisord for keeping ssh, apache, mysql running (no init scripts).

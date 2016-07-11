@@ -11,8 +11,6 @@ ADD shutdown /sbin/shutdown
 ADD run.sh /run.sh
 ADD firstrun.sh /firstrun.sh
 RUN chmod 755 /*.sh
-ADD php.ini /etc/php/apache2/php.ini
-ADD xdebug.ini /etc/php/apache2/conf.d/xdebug.ini
 ADD sshd_config /etc/ssh/sshd_config
 ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 ADD supervisord-mysqld.conf /etc/supervisor/conf.d/supervisord-mysqld.conf
