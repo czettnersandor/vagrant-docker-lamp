@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 # Install packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh bash sudo supervisor git apache2 memcached php7.0 libapache2-mod-php mysql-server php-mysql php-curl php-gd php-mcrypt php-xdebug php-memcache php-intl php-xsl phpmyadmin pwgen drush unzip
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install ssh bash sudo supervisor git apache2 memcached php7.0 libapache2-mod-php mysql-server php-mysql php-curl php-gd php-mcrypt php-xdebug php-memcache php-intl php-xsl php-zip phpmyadmin pwgen drush unzip
 
 # Add image configuration and scripts
 ADD start-apache2.sh /start-apache2.sh
