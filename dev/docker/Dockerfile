@@ -27,7 +27,7 @@ RUN chmod 755 /*.sh /sbin/shutdown
 ADD apache_default /etc/apache2/sites-available/000-default.conf
 ADD apache_webgrind /etc/apache2/sites-enabled/webgrind.conf
 ADD ports.conf /etc/apache2/ports.conf
-RUN a2enmod rewrite headers
+RUN a2enmod rewrite headers suexec
 
 # PHPMyAdmin config
 RUN echo "\n# Include PHPMyAdmin configuration\nInclude /etc/phpmyadmin/apache.conf\n" >> /etc/apache2/apache2.conf
